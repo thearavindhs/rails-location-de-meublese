@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :bundles do
     resources :bookings, shallow: true
-    resources :reviews, shallow: true
   end
+  resources :furnitures, shallow: true
 end
