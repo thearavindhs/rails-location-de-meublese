@@ -18,5 +18,8 @@
     <%= render partial: '/pages/navbar' %>
     <%= render 'shared/flashes' %>
     <%= yield %>
+    <% unless action_name == "home" %>
+      <%= render partial: '/pages/footer' %>
+    <% end %>
   </body>
 </html>
