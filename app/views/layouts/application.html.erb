@@ -4,19 +4,19 @@
     <title>RailsLocationDeMeublese</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
-
   <body class="d-flex flex-column min-vh-100">
-<!--     <p class="notice"><%= notice %></p>
+    <!--     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p> -->
     <%= render partial: '/pages/navbar' %>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0&appId=1425553147788041&autoLogAppEvents=1" nonce="wBU80dXW"></script>
     <%= render 'shared/flashes' %>
+    <div class="fb-login-button" data-width="" data-size="medium" data-button-type="continue_with" data-layout="default" data-auto-logout-link="true" data-use-continue-as="false"></div>
     <%= yield %>
     <% unless action_name == "home" %>
       <%= render partial: '/pages/footer' %>
