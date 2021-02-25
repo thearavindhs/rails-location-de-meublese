@@ -13,8 +13,6 @@
     <!--     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p> -->
     <%= render partial: '/pages/navbar' %>
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0&appId=1425553147788041&autoLogAppEvents=1" nonce="wBU80dXW"></script>
     <%= render 'shared/flashes' %>
     <%= yield %>
     <% unless action_name == "home" %>
