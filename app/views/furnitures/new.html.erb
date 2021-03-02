@@ -1,24 +1,19 @@
 <div class="container">
   <div class="row justify-content-center align-items-center">
     <div class="col-xs-12 col-sm-4 col-sm-offset-4">
-
       <div class="form-login">
-
         <%= simple_form_for @furniture do |f| %>
-        <div class="form-inputs">
-          <%= f.input :name, input_html: { class: "mb-2 mr-sm-2" }%>
-          <%= f.input :price, input_html: { class: "mb-2 mr-sm-2" }%>
-          <%= f.input :photo, as: :file %>
-        </div>
-
-        <div class="form-actions">
-          <%= f.button :submit, value="Post Furniture", class: "btn-primary mb-2" %>
-        </div>
-
+          <div class="form-inputs">
+            <%= f.input :name, input_html: { class: "mb-2 mr-sm-2" }%>
+            <%= f.input :price, input_html: { class: "mb-2 mr-sm-2" }%>
+            <%= image_tag "", width: 300, class: "hidden", id: "photo-preview" %>
+            <%= f.input :photo, input_html: { class: 'hidden', id: 'photo-input'}, label_html: { class: 'upload-photo'}, label: '📷 Upload a photo' %>
+          </div>
+          <div class="form-actions">
+            <%= f.button :submit, value="Post Furniture", class: "btn-primary mb-2" %>
+          </div>
         <% end %>
-
       </div>
-
     </div>
   </div>
 </div>
